@@ -32,7 +32,20 @@ const config = {
       // debug: true,
     }
   },
-  scene: initScenes()
+  scene: {
+    preload :preload,
+    create: create,
+    update :update
+  }
 }
 
 new Phaser.Game(config);
+function preload(){
+this.load.image('sky', 'assets/sky.png');
+}
+function create(){
+this.add.image(400,300,'sky');
+}
+function update(){
+
+}
